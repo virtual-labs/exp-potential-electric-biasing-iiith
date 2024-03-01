@@ -7,7 +7,7 @@
         "a": "Increases diffusion current",
         "b": "Decreases diffusion current",
         "c": "No effect on diffusion current",
-        "d": "Increases and then decreases"
+        "d": "Increases and then decreases",
       },
       "explanation": {
         "When the doping concentration of the N-type material increases, there are more free electrons available. This results in a higher concentration gradient across the junction, leading to an increase in the diffusion current. More free electrons are able to diffuse across the junction to the P-type region, contributing to a higher diffusion current.",
