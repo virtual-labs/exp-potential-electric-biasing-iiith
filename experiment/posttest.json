@@ -21,7 +21,7 @@
         "a": "Remains constant",
         "b": "It slopes upwards towards the N-type side",
         "c": "It slopes upwards towards the P-type side",
-        "d": "It forms a step-like structure"
+        "d": "It forms a step-like structure",
       },
       "explanation": {
         "With the majority of electrons moving away from the junction, there are fewer electrons available near the junction. As a result, there are more available energy levels for the remaining holes to occupy. This increase in available energy levels causes the Fermi level to rise in the p-region.",
@@ -34,7 +34,7 @@
                 "a": "Increases",
                 "b": "Decreases",
                 "c": "Remains same",
-                "d": "Depends on diode design"
+                "d": "Depends on diode design",
             },
             "explanation": {
                 "Under reverse bias, the external voltage opposes the built-in potential, causing an increase in the net potential barrier and consequently increasing the built-in potential across the PN junction.",
@@ -48,7 +48,7 @@
                 "a": "It represents the capacitance due to the storage of majority carriers in the depletion region.",
                 "b": "It represents the capacitance due to the displacement of mobile charge carriers within the semiconductor material.",
                 "c": "It represents the capacitance due to the recombination of electron-hole pairs in the depletion region.",
-                "d": "It represents the capacitance due to the movement of minority carriers across the junction."
+                "d": "It represents the capacitance due to the movement of minority carriers across the junction.",
             },
             "explanation": {
                 "Diffusion capacitance arises due to the storage and release of minority carriers (holes in the N-type region and electrons in the P-type region) as the PN junction diode switches from forward bias to reverse bias or vice versa. When the diode is forward biased, minority carriers are injected into the semiconductor material, and when it's reverse biased, these minority carriers are depleted. The process of charge storage and release gives rise to a capacitance known as diffusion capacitance.",
