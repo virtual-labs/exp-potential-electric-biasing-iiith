@@ -2,38 +2,73 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1.	How does an increase in the doping concentration of the N-type material affect the diffusion current in a PN junction?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Increases diffusion current",
+        "b": "Decreases diffusion current",
+        "c": "No effect on diffusion current",
+        "d": "Increases and then decreases"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanation": {
+        "When the doping concentration of the N-type material increases, there are more free electrons available. This results in a higher concentration gradient across the junction, leading to an increase in the diffusion current. More free electrons are able to diffuse across the junction to the P-type region, contributing to a higher diffusion current.",
       },
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2.	In a reverse biased PN junction, how does the Fermi level change across the depletion region?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Remains constant",
+        "b": "It slopes upwards towards the N-type side",
+        "c": "It slopes upwards towards the P-type side",
+        "d": "It forms a step-like structure"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanation": {
+        "With the majority of electrons moving away from the junction, there are fewer electrons available near the junction. As a result, there are more available energy levels for the remaining holes to occupy. This increase in available energy levels causes the Fermi level to rise in the p-region.",
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "advanced"
+       {
+            "question": "3.	In a PN junction, when reverse-biased, the built-in potential",
+            "answers": {
+                "a": "Increases",
+                "b": "Decreases",
+                "c": "Remains same",
+                "d": "Depends on diode design"
+            },
+            "explanation": {
+                "Under reverse bias, the external voltage opposes the built-in potential, causing an increase in the net potential barrier and consequently increasing the built-in potential across the PN junction.",
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4.Which of the following statements accurately describes the diffusion capacitance of a PN junction diode?  ",
+            "answers": {
+                "a": "It represents the capacitance due to the storage of majority carriers in the depletion region.",
+                "b": "It represents the capacitance due to the displacement of mobile charge carriers within the semiconductor material.",
+                "c": "It represents the capacitance due to the recombination of electron-hole pairs in the depletion region.",
+                "d": "It represents the capacitance due to the movement of minority carriers across the junction."
+            },
+            "explanation": {
+                "Diffusion capacitance arises due to the storage and release of minority carriers (holes in the N-type region and electrons in the P-type region) as the PN junction diode switches from forward bias to reverse bias or vice versa. When the diode is forward biased, minority carriers are injected into the semiconductor material, and when it's reverse biased, these minority carriers are depleted. The process of charge storage and release gives rise to a capacitance known as diffusion capacitance.",
+            },
+            "correctAnswer": "d",
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. A p-n junction diode made of Si has NA=10^17/cm3 and ND=10^15/cm3. Calculate the built-in potential of diode at 300K.",
+            "answers": {
+                "a": "4.9 ev",
+                "b": "2.1 ev",
+                "c": "4.2 ev",
+                "d": "3.7 ev",
+            },
+            "explanation": {
+                " Assume intrinsic carrier concentration of silicon at room temperature as 1.5*10^10/cm3 and use the built-in potential formula." ,
+            },
+            "correctAnswer": "c",
+            "difficulty": "intermediate"
     }
   ]
 }
