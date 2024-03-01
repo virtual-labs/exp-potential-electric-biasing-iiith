@@ -2,38 +2,73 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1.	For a PN junction diode in reverse bias, which statement is true regarding the applied voltage?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "The P-type side is at a higher potential than the N-type side",
+        "b": "The N-type side is at a higher potential than the P-type side",
+        "c": "Both P-type and N-type sides are at the same potential",
+        "d": "The potential across the diode is always zero in forward bias"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanation": {
+         "For a PN junction diode in reverse bias P-type is at lower potential and N-type is at higher potential",
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2.	In a forward-biased PN junction, which of the following statements is true with respect to majority charge carriers?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Holes move from the N-type region to the P-type region",
+        "b": "Electrons move from the N-type region to the P-type region",
+        "c": "Holes and electrons both move from the P-type region to the N-type region",
+        "d": "Current flow is not possible"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
+      "explanation": {
+        "In a forward biased PN junction, P-type is at higher potential so the majority charge carriers i.e; holes which are positively charged are repelled and as N-type is at lower potential electrons which are negatively charged are repelled. Therefore electrons in N-type and holes in P-type both move towards the junction",
+     },
+      "correctAnswer": "b",
       "difficulty": "beginner"
+       {
+            "question": "3.	In reverse bias, the depletion region of a PN junction:",
+            "answers": {
+                "a": "Widens",
+                "b": "Narrows",
+                "c": "Remains constant",
+                "d": "Disappears"
+            },
+            "explanation": {
+                "Under reverse bias conditions majority charge carriers i.e; electrons in N-type and holes in P-type are repelled away from the junction. As the majority carriers are repelled, the depletion region widens because the electric field across the depletion region increases due to the applied reverse voltage.",
+            },
+            "correctAnswer": "a",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. In a photodiode used in electronic devices, what is the main function of the PN junction?  ",
+            "answers": {
+                "a": "Generate electrical power",
+                "b": "Emit light",
+                "c": "Detect and convert light into electrical current",
+                "d": "Regulate voltage"
+            }, 
+            "explanation": {
+                "In a photodiode, the PN junction converts light into electrical current. When photons hit the semiconductor, they create electron-hole pairs in the depletion region of the PN junction. The electric field separates these charge carriers, generating a photocurrent. The PN junction is reverse biased to improve response speed and prevent recombination, enhancing the efficiency of light-to-current conversion.",
+            },
+            "correctAnswer": "c",
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5. Which material is commonly used as a dopant for the N-type region of a silicon PN junction diode? ",
+            "answers": {
+                "a": "Boron",
+                "b": "Phosphorous",
+                "c": "Gallium",
+                "d": "Carbon"
+            },
+            "explanation": {
+                "Phosphorus is commonly used as a dopant for the N-type region in a silicon PN junction diode. It has five valence electrons, which allows it to donate an extra electron to the silicon lattice, creating an excess of free electrons. These electrons become the majority charge carriers in the N-type region, enabling current flow when the diode is forward biased.",
+            },
+            "correctAnswer": "b",
+            "difficulty": "beginner"
     }
   ]
 }
