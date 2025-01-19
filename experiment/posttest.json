@@ -2,38 +2,140 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What happens to the width of the depletion region under forward bias?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It increases",
+        "b": "It decreases",
+        "c": "It remains the same",
+        "d": "It disappears completely"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Forward bias reduces the width of the depletion region.",
+        "b": "Correct. Forward bias narrows the depletion region, facilitating current flow.",
+        "c": "Incorrect. The depletion width changes with biasing.",
+        "d": "Incorrect. The depletion region does not disappear entirely under forward bias."
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the primary effect of reverse bias on the PN junction?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It increases the forward current",
+        "b": "It reduces the depletion region width",
+        "c": "It increases the depletion region width",
+        "d": "It creates a thermal runaway"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Reverse bias reduces current, not increases it.",
+        "b": "Incorrect. Reverse bias widens the depletion region.",
+        "c": "Correct. Reverse bias widens the depletion region, reducing current flow.",
+        "d": "Incorrect. Reverse bias does not cause thermal runaway under normal operation."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which parameter has the most significant impact on the built-in potential (V_bi)?",
+      "answers": {
+        "a": "Temperature",
+        "b": "Doping concentration",
+        "c": "Applied forward bias voltage",
+        "d": "External resistance"
+      },
+      "explanations": {
+        "a": "Correct. Temperature strongly influences intrinsic carrier concentration, affecting V_bi.",
+        "b": "Correct. Higher doping concentrations increase V_bi.",
+        "c": "Incorrect. Forward bias affects the external operation, not intrinsic V_bi.",
+        "d": "Incorrect. External resistance does not influence V_bi."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the dominant current component under reverse bias in an ideal PN junction?",
+      "answers": {
+        "a": "Diffusion current",
+        "b": "Recombination current",
+        "c": "Generation current",
+        "d": "Leakage current"
+      },
+      "explanations": {
+        "a": "Incorrect. Diffusion current dominates under forward bias.",
+        "b": "Incorrect. Recombination is more relevant to forward-biased PN junctions.",
+        "c": "Correct. Under reverse bias, generation current dominates in the depletion region.",
+        "d": "Partially correct. Leakage current includes generation current but also other minor effects."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why does breakdown occur in a reverse-biased PN junction at high voltages?",
+      "answers": {
+        "a": "Thermal effects cause the material to melt",
+        "b": "High electric field causes avalanche multiplication",
+        "c": "The depletion region becomes a conductor",
+        "d": "Doping concentrations equalize across the junction"
+      },
+      "explanations": {
+        "a": "Incorrect. Breakdown is not caused by melting.",
+        "b": "Correct. High electric fields cause impact ionization, leading to avalanche breakdown.",
+        "c": "Incorrect. The depletion region remains a barrier but allows large current flow.",
+        "d": "Incorrect. Doping concentrations do not equalize during breakdown."
+      },
+      "correctAnswer": "b",
+      "difficulty": "tough"
+    },
+    {
+      "question": "How does carrier lifetime affect the reverse recovery time of a PN junction diode?",
+      "answers": {
+        "a": "Shorter carrier lifetime increases recovery time",
+        "b": "Longer carrier lifetime decreases recovery time",
+        "c": "Shorter carrier lifetime decreases recovery time",
+        "d": "Carrier lifetime has no effect on recovery time"
+      },
+      "explanations": {
+        "a": "Incorrect. Shorter carrier lifetimes reduce the recovery time.",
+        "b": "Incorrect. Longer carrier lifetimes increase the recovery time.",
+        "c": "Correct. Shorter carrier lifetimes reduce the recovery time.",
+        "d": "Incorrect. Carrier lifetime is directly related to recovery time."
+      },
+      "correctAnswer": "c",
+      "difficulty": "tough"
+    },
+    {
+      "question": "What determines the breakdown voltage of a PN junction diode?",
+      "answers": {
+        "a": "Junction area",
+        "b": "Doping concentrations",
+        "c": "Carrier mobility",
+        "d": "Intrinsic carrier concentration"
+      },
+      "explanations": {
+        "a": "Incorrect. Junction area affects current but not breakdown voltage.",
+        "b": "Correct. Higher doping reduces the breakdown voltage.",
+        "c": "Incorrect. Carrier mobility affects current, not breakdown voltage.",
+        "d": "Incorrect. Intrinsic carrier concentration is unrelated to breakdown voltage."
+      },
+      "correctAnswer": "b",
+      "difficulty": "tough"
+    },
+    {
+      "question": "In a heavily doped PN junction, what phenomenon occurs at low forward bias?",
+      "answers": {
+        "a": "Tunneling",
+        "b": "Avalanche breakdown",
+        "c": "Thermal runaway",
+        "d": "Ohmic conduction"
+      },
+      "explanations": {
+        "a": "Correct. Heavily doped junctions allow carriers to tunnel at low forward biases.",
+        "b": "Incorrect. Avalanche breakdown occurs under reverse bias at high voltages.",
+        "c": "Incorrect. Thermal runaway is not relevant here.",
+        "d": "Incorrect. Ohmic conduction occurs when there is negligible barrier."
+      },
+      "correctAnswer": "a",
+      "difficulty": "tough"
     }
   ]
 }
