@@ -2,38 +2,106 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is a PN junction in semiconductors?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "A junction between two p-type materials",
+        "b": "A junction between two n-type materials",
+        "c": "A junction between p-type and n-type materials",
+        "d": "A junction in an insulator"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. A PN junction requires materials with opposite doping types.",
+        "b": "Incorrect. A PN junction involves two materials with opposite doping.",
+        "c": "Correct. A PN junction forms when p-type and n-type semiconductors are joined.",
+        "d": "Incorrect. PN junctions are found in semiconductors, not insulators."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary role of the depletion region in a PN junction?",
+      "answers": {
+        "a": "To allow free movement of carriers",
+        "b": "To create an electric field that opposes carrier movement",
+        "c": "To increase the conductivity of the semiconductor",
+        "d": "To act as a heat sink"
+      },
+      "explanations": {
+        "a": "Incorrect. The depletion region is devoid of free carriers.",
+        "b": "Correct. The depletion region creates an electric field that opposes further diffusion.",
+        "c": "Incorrect. The depletion region reduces conductivity due to the absence of free carriers.",
+        "d": "Incorrect. Heat dissipation is not the primary role of the depletion region."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to the depletion region when a PN junction is forward biased?",
+      "answers": {
+        "a": "It widens",
+        "b": "It narrows",
+        "c": "It remains unchanged",
+        "d": "It disappears"
+      },
+      "explanations": {
+        "a": "Incorrect. Forward biasing reduces the depletion region width.",
+        "b": "Correct. Forward bias narrows the depletion region, allowing current flow.",
+        "c": "Incorrect. Biasing affects the depletion region.",
+        "d": "Incorrect. The depletion region does not disappear entirely."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which equation represents the built-in potential of a PN junction?",
+      "answers": {
+        "a": "V_bi = kT / q",
+        "b": "V_bi = q / kT",
+        "c": "V_bi = (kT / q) ln(Na * Nd / ni^2)",
+        "d": "V_bi = (q / kT) ln(Na * Nd / ni^2)"
+      },
+      "explanations": {
+        "a": "Incorrect. This formula is incomplete.",
+        "b": "Incorrect. This formula is inverted.",
+        "c": "Correct. This is the correct equation for the built-in potential.",
+        "d": "Incorrect. This formula has the incorrect ratio of constants."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the role of the electric field in the depletion region?",
+      "answers": {
+        "a": "To accelerate electrons in the n-region",
+        "b": "To prevent recombination of electrons and holes",
+        "c": "To oppose the diffusion of carriers",
+        "d": "To increase the temperature of the material"
+      },
+      "explanations": {
+        "a": "Incorrect. The electric field does not selectively accelerate electrons.",
+        "b": "Incorrect. Recombination still occurs near the junction.",
+        "c": "Correct. The electric field opposes further diffusion of carriers.",
+        "d": "Incorrect. The electric field does not significantly affect temperature."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What effect does reverse bias have on the current flow in a PN junction?",
+      "answers": {
+        "a": "It allows significant current to flow",
+        "b": "It blocks current flow completely",
+        "c": "It permits a small leakage current",
+        "d": "It reverses the direction of current flow"
+      },
+      "explanations": {
+        "a": "Incorrect. Reverse bias restricts current flow significantly.",
+        "b": "Incorrect. There is always a small leakage current under reverse bias.",
+        "c": "Correct. Reverse bias allows a small leakage current to flow.",
+        "d": "Incorrect. Reverse bias does not change the current direction."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
