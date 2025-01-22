@@ -38,30 +38,70 @@ const correctAnswers1 = {
   }
 
   document.querySelectorAll('.arrow').forEach(arrow => {
-  arrow.addEventListener('dragstart', e => {
-    e.dataTransfer.setData('text/plain', e.target.dataset.type);
-    console.log('Arrow dragged:', e.target.dataset.type); // Debugging log
+    // Add touch events for mobile
+    arrow.addEventListener('touchstart', e => {
+      e.preventDefault();
+      const arrowType = e.target.dataset.type;
+      window.currentDraggedItem = arrowType;
+      console.log('Arrow touched:', arrowType);
+      e.target.classList.add('dragging');
+    });
+
+    // Keep existing drag event
+    arrow.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('text/plain', e.target.dataset.type);
+      console.log('Arrow dragged:', e.target.dataset.type);
+    });
+
+    arrow.addEventListener('touchend', e => {
+      e.target.classList.remove('dragging');
+    });
   });
-});
 
-document.querySelectorAll('.drop-zone').forEach(zone => {
-  zone.addEventListener('dragover', e => {
-    e.preventDefault(); // Allow dropping
-    console.log('Dragging over drop zone:', zone.dataset.bias); // Debugging log
+  document.querySelectorAll('.drop-zone').forEach(zone => {
+    // Add touch events for mobile
+    zone.addEventListener('touchend', e => {
+      e.preventDefault();
+      const arrowType = window.currentDraggedItem;
+      const zoneId = e.target.dataset.bias;
+
+      if (arrowType) {
+        e.target.textContent = document.querySelector(`[data-type="${arrowType}"]`).textContent;
+        currentPlacements[zoneId] = arrowType;
+        window.currentDraggedItem = null;
+        console.log('Arrow touched and placed:', arrowType, 'in zone:', zoneId);
+      }
+    });
+
+    // Keep existing dragover and drop events
+    zone.addEventListener('dragover', e => {
+      e.preventDefault();
+      console.log('Dragging over drop zone:', zone.dataset.bias);
+    });
+
+    zone.addEventListener('drop', e => {
+      e.preventDefault();
+      const arrowType = e.dataTransfer.getData('text/plain');
+      const zoneId = e.target.dataset.bias;
+
+      if (arrowType) {
+        e.target.textContent = document.querySelector(`[data-type="${arrowType}"]`).textContent;
+        currentPlacements[zoneId] = arrowType;
+        console.log('Arrow dropped:', arrowType, 'in zone:', zoneId);
+      } else {
+        console.error('No arrow type found for drop action.');
+      }
+    });
+
+    zone.addEventListener('touchenter', e => {
+      e.target.classList.add('drag-over');
+    });
+    
+    zone.addEventListener('touchleave', e => {
+      e.target.classList.remove('drag-over');
+    });
+    
+    zone.addEventListener('touchend', e => {
+      e.target.classList.remove('drag-over');
+    });
   });
-
-  zone.addEventListener('drop', e => {
-    e.preventDefault();
-    const arrowType = e.dataTransfer.getData('text/plain');
-    const zoneId = e.target.dataset.bias;
-
-    if (arrowType) {
-      e.target.textContent = document.querySelector(`[data-type="${arrowType}"]`).textContent;
-      currentPlacements[zoneId] = arrowType;
-
-      console.log('Arrow dropped:', arrowType, 'in zone:', zoneId); // Debugging log
-    } else {
-      console.error('No arrow type found for drop action.');
-    }
-  });
-});

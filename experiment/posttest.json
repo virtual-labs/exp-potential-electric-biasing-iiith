@@ -2,140 +2,140 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What happens to the width of the depletion region under forward bias?",
+      "question": "How does the electric field strength in the depletion region change under different biasing conditions?",
       "answers": {
-        "a": "It increases",
-        "b": "It decreases",
-        "c": "It remains the same",
-        "d": "It disappears completely"
+        "a": "Increases under both forward and reverse bias",
+        "b": "Decreases under forward bias and increases under reverse bias",
+        "c": "Increases under forward bias and decreases under reverse bias",
+        "d": "Remains constant regardless of biasing"
       },
       "explanations": {
-        "a": "Incorrect. Forward bias reduces the width of the depletion region.",
-        "b": "Correct. Forward bias narrows the depletion region, facilitating current flow.",
-        "c": "Incorrect. The depletion width changes with biasing.",
-        "d": "Incorrect. The depletion region does not disappear entirely under forward bias."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What is the primary effect of reverse bias on the PN junction?",
-      "answers": {
-        "a": "It increases the forward current",
-        "b": "It reduces the depletion region width",
-        "c": "It increases the depletion region width",
-        "d": "It creates a thermal runaway"
-      },
-      "explanations": {
-        "a": "Incorrect. Reverse bias reduces current, not increases it.",
-        "b": "Incorrect. Reverse bias widens the depletion region.",
-        "c": "Correct. Reverse bias widens the depletion region, reducing current flow.",
-        "d": "Incorrect. Reverse bias does not cause thermal runaway under normal operation."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which parameter has the most significant impact on the built-in potential (V_bi)?",
-      "answers": {
-        "a": "Temperature",
-        "b": "Doping concentration",
-        "c": "Applied forward bias voltage",
-        "d": "External resistance"
-      },
-      "explanations": {
-        "a": "Correct. Temperature strongly influences intrinsic carrier concentration, affecting V_bi.",
-        "b": "Correct. Higher doping concentrations increase V_bi.",
-        "c": "Incorrect. Forward bias affects the external operation, not intrinsic V_bi.",
-        "d": "Incorrect. External resistance does not influence V_bi."
+        "a": "Incorrect. The electric field responds differently to forward and reverse bias.",
+        "b": "Correct. Forward bias reduces the potential difference across the junction, weakening the electric field, while reverse bias increases it.",
+        "c": "Incorrect. The relationship between bias and field strength is reversed.",
+        "d": "Incorrect. The electric field strength changes significantly with applied bias."
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
     {
-      "question": "What is the dominant current component under reverse bias in an ideal PN junction?",
+      "question": "What is the relationship between minority carrier concentration and distance from the depletion region edge under forward bias?",
       "answers": {
-        "a": "Diffusion current",
-        "b": "Recombination current",
-        "c": "Generation current",
-        "d": "Leakage current"
+        "a": "Linear decrease with distance",
+        "b": "Exponential decrease with distance",
+        "c": "Constant concentration",
+        "d": "Quadratic decrease with distance"
       },
       "explanations": {
-        "a": "Incorrect. Diffusion current dominates under forward bias.",
-        "b": "Incorrect. Recombination is more relevant to forward-biased PN junctions.",
-        "c": "Correct. Under reverse bias, generation current dominates in the depletion region.",
-        "d": "Partially correct. Leakage current includes generation current but also other minor effects."
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "Why does breakdown occur in a reverse-biased PN junction at high voltages?",
-      "answers": {
-        "a": "Thermal effects cause the material to melt",
-        "b": "High electric field causes avalanche multiplication",
-        "c": "The depletion region becomes a conductor",
-        "d": "Doping concentrations equalize across the junction"
-      },
-      "explanations": {
-        "a": "Incorrect. Breakdown is not caused by melting.",
-        "b": "Correct. High electric fields cause impact ionization, leading to avalanche breakdown.",
-        "c": "Incorrect. The depletion region remains a barrier but allows large current flow.",
-        "d": "Incorrect. Doping concentrations do not equalize during breakdown."
+        "a": "Incorrect. The relationship follows exponential decay due to recombination.",
+        "b": "Correct. Minority carrier concentration decreases exponentially with distance due to recombination, following the diffusion equation.",
+        "c": "Incorrect. Concentration varies with distance due to recombination.",
+        "d": "Incorrect. The relationship is exponential, not quadratic."
       },
       "correctAnswer": "b",
       "difficulty": "tough"
     },
     {
-      "question": "How does carrier lifetime affect the reverse recovery time of a PN junction diode?",
+      "question": "How does the minority carrier diffusion length affect the I-V characteristics of a PN junction?",
       "answers": {
-        "a": "Shorter carrier lifetime increases recovery time",
-        "b": "Longer carrier lifetime decreases recovery time",
-        "c": "Shorter carrier lifetime decreases recovery time",
-        "d": "Carrier lifetime has no effect on recovery time"
+        "a": "Only affects reverse saturation current",
+        "b": "Only affects forward current",
+        "c": "Affects both forward current and reverse saturation current",
+        "d": "Has no effect on current flow"
       },
       "explanations": {
-        "a": "Incorrect. Shorter carrier lifetimes reduce the recovery time.",
-        "b": "Incorrect. Longer carrier lifetimes increase the recovery time.",
-        "c": "Correct. Shorter carrier lifetimes reduce the recovery time.",
-        "d": "Incorrect. Carrier lifetime is directly related to recovery time."
+        "a": "Incorrect. Diffusion length affects both forward and reverse currents.",
+        "b": "Incorrect. Diffusion length affects both current components.",
+        "c": "Correct. Longer diffusion lengths increase both forward current (by allowing carriers to travel further) and reverse saturation current (by increasing minority carrier collection).",
+        "d": "Incorrect. Diffusion length significantly impacts current transport."
       },
       "correctAnswer": "c",
       "difficulty": "tough"
     },
     {
-      "question": "What determines the breakdown voltage of a PN junction diode?",
+      "question": "What determines the temperature dependence of reverse saturation current in a PN junction?",
       "answers": {
-        "a": "Junction area",
-        "b": "Doping concentrations",
-        "c": "Carrier mobility",
-        "d": "Intrinsic carrier concentration"
+        "a": "Only bandgap narrowing",
+        "b": "Only intrinsic carrier concentration",
+        "c": "Both intrinsic carrier concentration and minority carrier diffusion coefficient",
+        "d": "Only minority carrier mobility"
       },
       "explanations": {
-        "a": "Incorrect. Junction area affects current but not breakdown voltage.",
-        "b": "Correct. Higher doping reduces the breakdown voltage.",
-        "c": "Incorrect. Carrier mobility affects current, not breakdown voltage.",
-        "d": "Incorrect. Intrinsic carrier concentration is unrelated to breakdown voltage."
+        "a": "Incorrect. While bandgap narrowing contributes, it's not the only factor.",
+        "b": "Incorrect. Diffusion coefficient also plays a crucial role.",
+        "c": "Correct. The reverse saturation current depends on both ni² (strong temperature dependence) and the diffusion coefficient (weaker temperature dependence).",
+        "d": "Incorrect. Mobility alone doesn't determine temperature dependence."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "tough"
     },
     {
-      "question": "In a heavily doped PN junction, what phenomenon occurs at low forward bias?",
+      "question": "In a high-injection regime, how does the forward current-voltage relationship differ from low-injection?",
       "answers": {
-        "a": "Tunneling",
-        "b": "Avalanche breakdown",
-        "c": "Thermal runaway",
-        "d": "Ohmic conduction"
+        "a": "Changes from exponential to linear",
+        "b": "Ideality factor changes from 1 to 2",
+        "c": "Current becomes independent of voltage",
+        "d": "Voltage dependence doubles (slope halves)"
       },
       "explanations": {
-        "a": "Correct. Heavily doped junctions allow carriers to tunnel at low forward biases.",
-        "b": "Incorrect. Avalanche breakdown occurs under reverse bias at high voltages.",
-        "c": "Incorrect. Thermal runaway is not relevant here.",
-        "d": "Incorrect. Ohmic conduction occurs when there is negligible barrier."
+        "a": "Incorrect. The relationship remains exponential but with modified parameters.",
+        "b": "Incorrect. This describes recombination in the depletion region, not high injection.",
+        "c": "Incorrect. Current still depends on voltage.",
+        "d": "Correct. In high-injection, the voltage dependence is halved due to conductivity modulation and charge neutrality requirements."
       },
-      "correctAnswer": "a",
-      "difficulty": "tough"
+      "correctAnswer": "d",
+      "difficulty": "expert"
+    },
+    {
+      "question": "How does the depletion capacitance of a PN junction vary with reverse bias voltage?",
+      "answers": {
+        "a": "Proportional to √V",
+        "b": "Inversely proportional to √V",
+        "c": "Linearly proportional to V",
+        "d": "Independent of V"
+      },
+      "explanations": {
+        "a": "Incorrect. Capacitance decreases with increasing reverse bias.",
+        "b": "Correct. Depletion capacitance is proportional to 1/√V due to the relationship between depletion width and voltage.",
+        "c": "Incorrect. The relationship follows an inverse square root law.",
+        "d": "Incorrect. Depletion capacitance varies significantly with bias voltage."
+      },
+      "correctAnswer": "b",
+      "difficulty": "expert"
+    },
+    {
+      "question": "What physical mechanisms contribute to excess carrier storage in a forward-biased PN junction?",
+      "answers": {
+        "a": "Only majority carrier accumulation",
+        "b": "Only depletion region modulation",
+        "c": "Both diffusion capacitance and depletion capacitance",
+        "d": "Only surface recombination"
+      },
+      "explanations": {
+        "a": "Incorrect. Minority carrier storage is crucial.",
+        "b": "Incorrect. Diffusion capacitance dominates in forward bias.",
+        "c": "Correct. Both mechanisms contribute, with diffusion capacitance dominant in forward bias and depletion capacitance in reverse bias.",
+        "d": "Incorrect. Surface effects are secondary to bulk storage mechanisms."
+      },
+      "correctAnswer": "c",
+      "difficulty": "expert"
+    },
+    {
+      "question": "How does the presence of deep-level impurities affect carrier recombination in the depletion region?",
+      "answers": {
+        "a": "Only affects majority carrier transport",
+        "b": "Creates additional energy states facilitating recombination",
+        "c": "Only affects reverse breakdown voltage",
+        "d": "Has no effect on recombination"
+      },
+      "explanations": {
+        "a": "Incorrect. Deep-level impurities affect both carrier types.",
+        "b": "Correct. Deep-level impurities act as recombination centers, providing energy states within the bandgap that facilitate carrier recombination.",
+        "c": "Incorrect. While they affect breakdown, their primary impact is on recombination.",
+        "d": "Incorrect. Deep-level impurities significantly impact recombination rates."
+      },
+      "correctAnswer": "b",
+      "difficulty": "expert"
     }
   ]
 }
