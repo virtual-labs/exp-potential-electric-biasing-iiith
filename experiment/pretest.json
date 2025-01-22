@@ -2,106 +2,106 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is a PN junction in semiconductors?",
+      "question": "What is a PN junction, and what are its fundamental components?",
       "answers": {
-        "a": "A junction between two p-type materials",
-        "b": "A junction between two n-type materials",
-        "c": "A junction between p-type and n-type materials",
-        "d": "A junction in an insulator"
+        "a": "A junction between two p-type semiconductors with different doping levels",
+        "b": "A junction between two n-type semiconductors with different doping levels",
+        "c": "A junction formed at the interface of p-type and n-type semiconductors, creating a depletion region",
+        "d": "A junction between a semiconductor and a metal contact"
       },
       "explanations": {
-        "a": "Incorrect. A PN junction requires materials with opposite doping types.",
-        "b": "Incorrect. A PN junction involves two materials with opposite doping.",
-        "c": "Correct. A PN junction forms when p-type and n-type semiconductors are joined.",
-        "d": "Incorrect. PN junctions are found in semiconductors, not insulators."
+        "a": "Incorrect. A PN junction must have both p-type and n-type regions, not just p-type materials with different doping.",
+        "b": "Incorrect. A PN junction must have both p-type and n-type regions, not just n-type materials with different doping.",
+        "c": "Correct. A PN junction is formed when p-type and n-type semiconductors are joined, creating a depletion region at their interface due to carrier diffusion.",
+        "d": "Incorrect. This describes a metal-semiconductor junction (Schottky contact), not a PN junction."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the primary role of the depletion region in a PN junction?",
+      "question": "What physical mechanisms occur in the depletion region of a PN junction?",
       "answers": {
-        "a": "To allow free movement of carriers",
-        "b": "To create an electric field that opposes carrier movement",
-        "c": "To increase the conductivity of the semiconductor",
-        "d": "To act as a heat sink"
+        "a": "Only electron diffusion from n-type to p-type region",
+        "b": "Creation of an electric field that balances diffusion current with drift current",
+        "c": "Only hole diffusion from p-type to n-type region",
+        "d": "Continuous flow of current without any barrier"
       },
       "explanations": {
-        "a": "Incorrect. The depletion region is devoid of free carriers.",
-        "b": "Correct. The depletion region creates an electric field that opposes further diffusion.",
-        "c": "Incorrect. The depletion region reduces conductivity due to the absence of free carriers.",
-        "d": "Incorrect. Heat dissipation is not the primary role of the depletion region."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What happens to the depletion region when a PN junction is forward biased?",
-      "answers": {
-        "a": "It widens",
-        "b": "It narrows",
-        "c": "It remains unchanged",
-        "d": "It disappears"
-      },
-      "explanations": {
-        "a": "Incorrect. Forward biasing reduces the depletion region width.",
-        "b": "Correct. Forward bias narrows the depletion region, allowing current flow.",
-        "c": "Incorrect. Biasing affects the depletion region.",
-        "d": "Incorrect. The depletion region does not disappear entirely."
+        "a": "Incorrect. Both electron and hole diffusion occur, and drift current is also present.",
+        "b": "Correct. The depletion region creates an electric field that establishes equilibrium between diffusion and drift currents.",
+        "c": "Incorrect. Both electron and hole diffusion occur, not just hole diffusion.",
+        "d": "Incorrect. The depletion region actually creates a potential barrier to current flow."
       },
       "correctAnswer": "b",
       "difficulty": "intermediate"
     },
     {
-      "question": "Which equation represents the built-in potential of a PN junction?",
+      "question": "How does forward biasing affect a PN junction's characteristics?",
       "answers": {
-        "a": "V_bi = kT / q",
-        "b": "V_bi = q / kT",
-        "c": "V_bi = (kT / q) ln(Na * Nd / ni^2)",
-        "d": "V_bi = (q / kT) ln(Na * Nd / ni^2)"
+        "a": "Increases depletion region width and reduces potential barrier",
+        "b": "Decreases depletion region width, reduces potential barrier, and enables significant current flow",
+        "c": "Has no effect on the depletion region or current flow",
+        "d": "Only affects the n-type region conductivity"
       },
       "explanations": {
-        "a": "Incorrect. This formula is incomplete.",
-        "b": "Incorrect. This formula is inverted.",
-        "c": "Correct. This is the correct equation for the built-in potential.",
-        "d": "Incorrect. This formula has the incorrect ratio of constants."
+        "a": "Incorrect. Forward bias decreases (not increases) depletion width while reducing the potential barrier.",
+        "b": "Correct. Forward bias reduces both depletion width and potential barrier, allowing significant current flow through the junction.",
+        "c": "Incorrect. Forward bias significantly affects both depletion region width and current flow.",
+        "d": "Incorrect. Forward bias affects both p-type and n-type regions and their interface."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the significance of the built-in potential (V_bi) in a PN junction, and how is it calculated?",
+      "answers": {
+        "a": "V_bi = (kT/q)ln(Na×Nd/ni²); it represents the potential barrier that carriers must overcome",
+        "b": "V_bi = kT/q; it represents the thermal voltage",
+        "c": "V_bi = Na×Nd; it represents the doping concentration product",
+        "d": "V_bi = ni²; it represents the intrinsic carrier concentration"
+      },
+      "explanations": {
+        "a": "Correct. The built-in potential is the natural barrier voltage that develops across the junction and depends on doping concentrations and intrinsic carrier density.",
+        "b": "Incorrect. This is the thermal voltage formula, not the built-in potential.",
+        "c": "Incorrect. This is just the product of doping concentrations without the necessary logarithmic relationship.",
+        "d": "Incorrect. This only represents the intrinsic carrier concentration squared."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How do drift and diffusion currents interact in a PN junction at equilibrium?",
+      "answers": {
+        "a": "Drift current dominates and diffusion current is negligible",
+        "b": "Diffusion current dominates and drift current is negligible",
+        "c": "Drift and diffusion currents are equal and opposite, resulting in zero net current",
+        "d": "Both currents flow in the same direction, adding together"
+      },
+      "explanations": {
+        "a": "Incorrect. At equilibrium, neither current dominates; they balance each other.",
+        "b": "Incorrect. At equilibrium, neither current dominates; they balance each other.",
+        "c": "Correct. At equilibrium, the drift current exactly balances the diffusion current, resulting in zero net current flow.",
+        "d": "Incorrect. The currents flow in opposite directions to achieve equilibrium."
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
     },
     {
-      "question": "What is the role of the electric field in the depletion region?",
+      "question": "What happens to carrier movement and current flow when a PN junction is reverse biased?",
       "answers": {
-        "a": "To accelerate electrons in the n-region",
-        "b": "To prevent recombination of electrons and holes",
-        "c": "To oppose the diffusion of carriers",
-        "d": "To increase the temperature of the material"
+        "a": "Majority carriers easily cross the junction, creating large current flow",
+        "b": "Only minority carriers contribute to a small reverse saturation current",
+        "c": "All carrier movement and current flow stops completely",
+        "d": "Current flow reverses direction but maintains the same magnitude"
       },
       "explanations": {
-        "a": "Incorrect. The electric field does not selectively accelerate electrons.",
-        "b": "Incorrect. Recombination still occurs near the junction.",
-        "c": "Correct. The electric field opposes further diffusion of carriers.",
-        "d": "Incorrect. The electric field does not significantly affect temperature."
+        "a": "Incorrect. Reverse bias makes it harder for majority carriers to cross the junction.",
+        "b": "Correct. Under reverse bias, only thermally generated minority carriers contribute to a small reverse saturation current.",
+        "c": "Incorrect. A small reverse saturation current still flows.",
+        "d": "Incorrect. The current magnitude is much smaller in reverse bias compared to forward bias."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "What effect does reverse bias have on the current flow in a PN junction?",
-      "answers": {
-        "a": "It allows significant current to flow",
-        "b": "It blocks current flow completely",
-        "c": "It permits a small leakage current",
-        "d": "It reverses the direction of current flow"
-      },
-      "explanations": {
-        "a": "Incorrect. Reverse bias restricts current flow significantly.",
-        "b": "Incorrect. There is always a small leakage current under reverse bias.",
-        "c": "Correct. Reverse bias allows a small leakage current to flow.",
-        "d": "Incorrect. Reverse bias does not change the current direction."
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }

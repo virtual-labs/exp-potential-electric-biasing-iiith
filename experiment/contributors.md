@@ -8,4 +8,4 @@ EMPTY
 ### Developers
 | SNo. | Name | Email | Institute | ID |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 | name | email | institute | id |
+| 1 | Shruti Dhasmana | shruti23cc12@gmail.com | IIIT-H | id |

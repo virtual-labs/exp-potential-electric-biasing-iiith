@@ -1,4 +1,3 @@
-
 .exercise-section {
     display: flex;
     flex-direction: column;
@@ -18,11 +17,15 @@
   /* Arrow bank organization */
   .arrow-bank {
     display: flex;
-    /* flex-direction: column; */
-
-    width: 100%;
-    height: 15%;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    background: #f8f9fa;
+    justify-content: center;
+    min-height: 100px;
   }
   
   .arrow-group {
@@ -34,8 +37,21 @@
   }
   
   .arrow {
-    text-align: center;
-    min-width: 40px;
+    padding: 12px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    user-select: none;
+    font-size: clamp(0.875rem, 2.5vw, 1.1rem);
+    transition: all 0.3s ease;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    /* Add visual feedback for active state */
+    &:active {
+      background: #e8f4fd;
+      transform: scale(0.98);
+    }
   }
   
   /* Diagram containers */
@@ -60,7 +76,9 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .arrow {
-      min-width: 140px;
+      padding: 15px 25px; /* Larger touch target */
+      margin: 5px;
+      min-width: 120px; /* Ensure arrows are wide enough to tap */
     }
     
     .section-title {
@@ -70,7 +88,8 @@
   
   @media (max-width: 480px) {
     .arrow {
-      min-width: 120px;
+      padding: 12px 20px;
+      min-width: 100px;
       font-size: 0.9rem;
     }
     
@@ -162,12 +181,12 @@
     width: 100%;
     max-width: 450px;
     min-width: 300px;
-    height: 150px;
-    
+    height: 300px;  /* Increased height for better spacing */
     border: 3px solid #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: white;
+    margin: 20px 0;
 }
 
 .diagram-title {
@@ -182,29 +201,32 @@
 .pn-junction {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    align-items: stretch; /* Changed to stretch to fill height */
+    height: calc(100% - 40px); /* Subtract padding to prevent overflow */
+    position: relative;
+    margin: 20px;
 }
 
 .p-type, .n-type {
-    width: 45%;
-    height: 100%;
+    flex: 1; /* Make both sides equal */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
-    background-color: #c3e6cb;
 }
+
 .p-type {
     background-color: #ffcccc;
     border-radius: 7px 0 0 7px;
-  }
+    margin-right: -1px; /* Prevent double border with depletion */
+}
 
-  .n-type {
+.n-type {
     background-color: #cce6ff;
     border-radius: 0 7px 7px 0;
-  }
+    margin-left: -1px; /* Prevent double border with depletion */
+}
 
 .depletion {
     width: 10%;
@@ -219,50 +241,29 @@
     color: #444;
 }
 
-/* Arrow bank */
-.arrow-bank {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-    padding: 15px;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-    background: #f8f9fa;
-    justify-content: center;
-}
-
-.arrow {
-    padding: 8px 15px;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    background: white;
-    cursor: move;
-    user-select: none;
-    font-size: clamp(0.75rem, 2vw, 1rem);
-    transition: all 0.3s ease;
-}
-
 /* Drop zones */
 .drop-zone {
     position: absolute;
-    width: 80%;
-    height: 50px;
-    left: 10%;
+    width: 70%;        /* Reduced width to fit better */
+    height: 50px;      /* Adjusted height */
+    left: 15%;        /* Centered horizontally */
     background: rgba(52, 152, 219, 0.1);
     border: 2px dashed #3498db;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    touch-action: none;
+    font-size: clamp(0.875rem, 2.5vw, 1.1rem);
+    z-index: 1;       /* Ensure drop zones stay above the junction */
 }
 
 .drop-zone.diffusion {
-    top: 30%;
+    top: 20%;         /* Adjusted positioning */
 }
 
 .drop-zone.drift {
-    top: 60%;
+    bottom: 20%;      /* Adjusted positioning */
 }
 
 /* Feedback and buttons */
@@ -299,16 +300,21 @@
     }
     
     .diagram {
-        height: 250px;
-    }
-    
-    .arrow {
-        font-size: 0.875rem;
-        padding: 6px 12px;
+        min-height: 300px; /* Increased height for mobile */
+        margin-bottom: 30px;
     }
     
     .drop-zone {
-        height: 40px;
+        height: 70px; /* Even larger touch target on mobile */
+    }
+    
+    .arrow-bank {
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .diagrams {
+        gap: 40px;
     }
 }
 
@@ -319,16 +325,69 @@
     }
     
     .diagram {
-        height: 200px;
+        min-height: 250px;
+        min-width: 280px;
     }
     
-    .arrow-bank {
+    .drop-zone {
+        width: 90%;
+        left: 5%;
+        font-size: 0.9rem;
+    }
+    
+    .instructions-content {
+        font-size: 0.9rem;
         padding: 10px;
     }
-    
-    .arrow {
+}
+
+/* Media query for laptop/desktop */
+@media screen and (min-width: 769px) {
+    .diagram {
+        height: 350px;
+    }
+
+    .drop-zone {
+        width: 60%;    /* Slightly narrower on desktop */
+        left: 20%;
+        height: 45px;  /* Slightly smaller height */
+    }
+
+    .drop-zone.diffusion {
+        top: 25%;
+    }
+
+    .drop-zone.drift {
+        bottom: 25%;
+    }
+
+    .pn-junction {
+        height: calc(100% - 60px); /* Adjust for larger padding */
+        margin: 30px;
+    }
+
+    .p-type, .n-type {
+        font-size: 2rem;
+    }
+
+    .depletion {
+        font-size: 0.875rem;
+    }
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+    .pn-junction {
+        height: calc(100% - 40px);
+        margin: 20px;
+    }
+
+    .p-type, .n-type {
+        font-size: 1.5rem;
+    }
+
+    .depletion {
         font-size: 0.75rem;
-        padding: 5px 10px;
     }
 }
 
@@ -343,4 +402,15 @@
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+/* Add visual feedback for drag and drop interactions */
+.arrow.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.drop-zone.drag-over {
+    background: rgba(52, 152, 219, 0.2);
+    border-style: solid;
 }
