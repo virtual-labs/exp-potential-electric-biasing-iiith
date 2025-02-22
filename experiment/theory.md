@@ -7,13 +7,14 @@ A **PN junction** is formed by bringing together p-type and n-type semiconductor
 
 When these materials join, two fundamental processes occur:
 1. **Diffusion:** Majority carriers diffuse across the junction due to concentration gradients
-2. **Drift:** An electric field develops that causes drift of carriers in the opposite direction
+2. **Drift:** An electric field develops that causes drift of carriers in the opposite direction. drift flow of current is in opposite direction to diffusion current.
 
 ---
+(!images/image.png)
 
-### **Key Concepts and Physical Mechanisms**
+# Key Concepts and Physical Mechanisms
 
-#### **1. Formation of Depletion Region**
+## 1. Formation of Depletion Region
 
 When p-type and n-type semiconductors make contact:
 - Electrons diffuse from n-type to p-type region, leaving behind immobile positive donor ions
@@ -21,97 +22,97 @@ When p-type and n-type semiconductors make contact:
 - This creates a **depletion region** (space charge region) containing exposed ionic charges
 - The exposed ions create an internal **electric field** (E-field) that opposes further diffusion
 
-The built-in potential (\(V_{bi}\)) across the junction at thermal equilibrium is:
+The built-in potential (V_bi) across the junction at thermal equilibrium is:
 
-\[
+$$
 V_{bi} = \frac{kT}{q} \ln{\left( \frac{N_a N_d}{n_i^2} \right)}
-\]
+$$
 
-Where:  
-- \(k\): Boltzmann constant (\(1.38 \times 10^{-23} \, \text{J/K}\))  
-- \(T\): Absolute temperature (K)  
-- \(q\): Elementary charge (\(1.6 \times 10^{-19} \, \text{C}\))  
-- \(N_a\): Acceptor concentration in p-type region  
-- \(N_d\): Donor concentration in n-type region  
-- \(n_i\): Intrinsic carrier concentration  
+Where:
+- k: Boltzmann constant (1.38 × 10^-23 J/K)
+- T: Absolute temperature (K)
+- q: Elementary charge (1.6 × 10^-19 C)
+- N_a: Acceptor concentration in p-type region
+- N_d: Donor concentration in n-type region
+- n_i: Intrinsic carrier concentration
 
----
-
-#### **2. Electric Field and Charge Distribution**
+## 2. Electric Field and Charge Distribution
 
 The electric field in the depletion region varies with position:
 
 For an abrupt junction:
-\[
+
+$$
 E(x) = \frac{qN_d}{\epsilon_s}(x + x_n) \quad \text{for } -x_n \leq x \leq 0 \text{ (n-side)}
-\]
-\[
+$$
+
+$$
 E(x) = \frac{qN_a}{\epsilon_s}(x - x_p) \quad \text{for } 0 \leq x \leq x_p \text{ (p-side)}
-\]
+$$
 
 Where:
-- \(\epsilon_s\): Semiconductor permittivity
-- \(x_n\), \(x_p\): Depletion region widths in n and p regions
+- ε_s: Semiconductor permittivity
+- x_n, x_p: Depletion region widths in n and p regions
 
-The total depletion width (\(W\)) follows:
-\[
+The total depletion width (W) follows:
+
+$$
 W = x_n + x_p = \sqrt{\frac{2\epsilon_s}{q}\left(\frac{1}{N_a} + \frac{1}{N_d}\right)(V_{bi} - V_a)}
-\]
-Where \(V_a\) is the applied voltage (positive for forward bias).
+$$
 
----
+Where V_a is the applied voltage (positive for forward bias).
 
-#### **3. Current-Voltage Characteristics**
+## 3. Current-Voltage Characteristics
 
-##### **Forward Bias**
-When \(V_a > 0\), the current follows the diode equation:
-\[
+### Forward Bias
+
+When V_a > 0, the current follows the diode equation:
+
+$$
 I = I_s\left(e^{\frac{qV_a}{nkT}} - 1\right)
-\]
+$$
 
 Where:
-- \(I_s\): Reverse saturation current
-- \(n\): Ideality factor (1 for diffusion, 2 for recombination-dominated current)
+- I_s: Reverse saturation current
+- n: Ideality factor (1 for diffusion, 2 for recombination-dominated current)
 
 The reverse saturation current is:
-\[
+
+$$
 I_s = qA\left(\frac{D_n}{L_n}n_p + \frac{D_p}{L_p}p_n\right)
-\]
+$$
 
 Where:
-- \(D_n\), \(D_p\): Diffusion coefficients
-- \(L_n\), \(L_p\): Diffusion lengths
-- \(n_p\), \(p_n\): Minority carrier concentrations
+- D_n, D_p: Diffusion coefficients
+- L_n, L_p: Diffusion lengths
+- n_p, p_n: Minority carrier concentrations
 
-##### **Reverse Bias**
-When \(V_a < 0\):
+### Reverse Bias
+
+When V_a < 0:
 - Depletion width increases
-- Current saturates at \(-I_s\) until breakdown
+- Current saturates at -I_s until breakdown
 - Minority carriers constitute the reverse current
 
----
-
-#### **4. Junction Capacitance**
+## 4. Junction Capacitance
 
 Two types of capacitance exist:
 
 1. **Depletion (Junction) Capacitance:**
-\[
-C_j = \frac{\epsilon_s A}{W} = \frac{C_{j0}}{\sqrt{1 - V_a/V_{bi}}}
-\]
+   $$
+   C_j = \frac{\epsilon_s A}{W} = \frac{C_{j0}}{\sqrt{1 - V_a/V_{bi}}}
+   $$
 
 2. **Diffusion Capacitance** (forward bias):
-\[
-C_d = \frac{\tau I}{V_T}
-\]
+   $$
+   C_d = \frac{\tau I}{V_T}
+   $$
 
 Where:
-- \(\tau\): Carrier lifetime
-- \(V_T = kT/q\): Thermal voltage
+- τ: Carrier lifetime
+- V_T = kT/q: Thermal voltage
 
----
-
-#### **5. Temperature Effects**
+## 5. Temperature Effects
 
 Temperature influences:
 - Built-in potential (decreases with T)
@@ -119,9 +120,7 @@ Temperature influences:
 - Bandgap (decreases with T)
 - Carrier mobilities and diffusion coefficients
 
----
-
-### **Applications**
+## Applications
 
 PN junctions are fundamental to:
 1. **Rectification:** AC to DC conversion
@@ -129,7 +128,6 @@ PN junctions are fundamental to:
 3. **Voltage Regulation:** Using breakdown characteristics
 4. **Photodetection:** Converting light to electrical signals
 5. **Light Emission:** LEDs and laser diodes
-
 ---
 
 ### **Diagrams**
