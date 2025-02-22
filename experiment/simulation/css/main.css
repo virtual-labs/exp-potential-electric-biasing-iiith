@@ -1,4 +1,6 @@
 /* You CSS goes in here */
+
+
 .navigation {
     display: flex;
     justify-content: center;
@@ -10,7 +12,7 @@
     padding: 10px 20px;
     text-decoration: none;
     color: #333;
-    border: 1px solid #ccc;
+    border:.2rem solid #97d23d;
     border-radius: 4px;
     transition: all 0.3s ease;
   }
@@ -20,9 +22,9 @@
   }
   
   .navigation a.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #0056b3;
+    background-color: #97d23d;;
+    color: black;
+    border-color:#97d23d;;
   }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,10 +52,9 @@ body {
     margin: 20px auto;
     max-width: 1200px;
     position: relative;
-    background: rgba(255, 255, 255, 0.9);
+
     padding: 3px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
 }
 .questions, .answers {
     width: 45%;
@@ -125,7 +126,7 @@ button {
     font-weight: 600;
 }
 #checkBtn {
-    background: #2196F3;
+    background: #97d23d;;
     color: white;
     box-shadow: 0 4px 6px rgba(33, 150, 243, 0.3);
 }
