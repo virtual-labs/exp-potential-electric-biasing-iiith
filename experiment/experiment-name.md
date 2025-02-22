@@ -1,1 +1,1 @@
-## Experiment name
+## PN JUNCTION DIODE
