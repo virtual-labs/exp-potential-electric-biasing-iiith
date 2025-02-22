@@ -23,38 +23,13 @@ When p-type and n-type semiconductors make contact:
 - This creates a **depletion region** (space charge region) containing exposed ionic charges.
 - The exposed ions create an internal **electric field** (E-field) that opposes further diffusion.
 
-The built-in potential (`V_bi`) across the junction at thermal equilibrium is:
-
-V_bi = (kT/q) * ln((N_a * N_d) / (n_i^2))
-
-
-Where:
-- `k`: Boltzmann constant (`1.38 × 10^-23 J/K`)
-- `T`: Absolute temperature (K)
-- `q`: Elementary charge (`1.6 × 10^-19 C`)
-- `N_a`: Acceptor concentration in p-type region
-- `N_d`: Donor concentration in n-type region
-- `n_i`: Intrinsic carrier concentration
+![](./images/q1.png)
 
 ### 2. Electric Field and Charge Distribution
 
 The electric field in the depletion region varies with position. For an abrupt junction:
 
-E(x) = (qN_d / ε_s) * (x + x_n) for -x_n ≤ x ≤ 0 (n-side)
-E(x) = (qN_a / ε_s) * (x - x_p) for 0 ≤ x ≤ x_p (p-side)
-
-
-Where:
-- `ε_s`: Semiconductor permittivity
-- `x_n, x_p`: Depletion region widths in n and p regions
-
-The total depletion width (`W`) follows:
-
-
-W = x_n + x_p = sqrt((2ε_s / q) * (1/N_a + 1/N_d) * (V_bi - V_a))
-
-
-Where `V_a` is the applied voltage (positive for forward bias).
+![](./images/q2.png)
 
 ### 3. Current-Voltage Characteristics
 
