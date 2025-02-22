@@ -33,58 +33,21 @@ The electric field in the depletion region varies with position. For an abrupt j
 
 ### 3. Current-Voltage Characteristics
 
-#### Forward Bias
+#### Forward Bias , Reverse bias
 
-When \(V_a > 0\), the current follows the diode equation:
-
-
-I = I_s * (e^(qV_a / nkT) - 1)
-
-Where:
-- `I_s`: Reverse saturation current
-- `n`: Ideality factor (1 for diffusion, 2 for recombination-dominated current)
-
-The reverse saturation current is:
-
-I_s = qA * ((D_n / L_n) * n_p + (D_p / L_p) * p_n)
+![](./images/q3.png)
 
 
-Where:
-- `D_n, D_p`: Diffusion coefficients
-- `L_n, L_p`: Diffusion lengths
-- `n_p, p_n`: Minority carrier concentrations
-
-#### Reverse Bias
-
-When \(V_a < 0\):
-- Depletion width increases
-- Current saturates at \(-I_s\) until breakdown
-- Minority carriers constitute the reverse current
 
 ### 4. Junction Capacitance
-
-Two types of capacitance exist:
-
-1. **Depletion (Junction) Capacitance:**
-   $$
-   C_j = \frac{\epsilon_s A}{W} = \frac{C_{j0}}{\sqrt{1 - V_a/V_{bi}}}
-   $$
-
-2. **Diffusion Capacitance** (forward bias):
-   $$
-   C_d = \frac{\tau I}{V_T}
-   $$
-
-Where:
-- \(\tau\): Carrier lifetime
-- \(V_T = \frac{kT}{q}\): Thermal voltage
+![](./images/q4.png)
 
 ### 5. Temperature Effects
 
 Temperature influences:
-- Built-in potential (decreases with \(T\))
-- Reverse saturation current (increases exponentially with \(T\))
-- Bandgap (decreases with \(T\))
+- Built-in potential (decreases with T)
+- Reverse saturation current (increases exponentially with T)
+- Bandgap (decreases with T)
 - Carrier mobilities and diffusion coefficients
 
 ## Applications
