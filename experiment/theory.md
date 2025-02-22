@@ -11,7 +11,7 @@ When these materials join, two fundamental processes occur:
 1. **Diffusion:** Majority carriers diffuse across the junction due to concentration gradients.
 2. **Drift:** An electric field develops that causes drift of carriers in the opposite direction. Drift flow of current is in the opposite direction to diffusion current.
 
-![Current Flow](experiment/images/image.png)
+![Current Flow](./images/image.png)
 
 ## Key Concepts and Physical Mechanisms
 
@@ -124,7 +124,7 @@ PN junctions are fundamental to:
 ## Diagrams
 
 ### 1. Formation of Depletion Region
-![PN Junction Depletion Region Diagram](experiment/images/depletion.png)
+![PN Junction Depletion Region Diagram](./images/depletion.png)
 
 ### 2. Electric Field and Charge Density
-![Electric Field and Charge Distribution Diagram](experiment/images/electric.png)
+![Electric Field and Charge Distribution Diagram](./images/electric.png)
