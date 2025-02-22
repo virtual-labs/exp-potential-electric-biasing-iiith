@@ -11,7 +11,7 @@ When these materials join, two fundamental processes occur:
 1. **Diffusion:** Majority carriers diffuse across the junction due to concentration gradients.
 2. **Drift:** An electric field develops that causes drift of carriers in the opposite direction. Drift flow of current is in the opposite direction to diffusion current.
 
-![Current Flow](images/image.png)
+![Current Flow](experiment/images/image.png)
 
 ## Key Concepts and Physical Mechanisms
 
@@ -23,43 +23,38 @@ When p-type and n-type semiconductors make contact:
 - This creates a **depletion region** (space charge region) containing exposed ionic charges.
 - The exposed ions create an internal **electric field** (E-field) that opposes further diffusion.
 
-The built-in potential (\(V_{bi}\)) across the junction at thermal equilibrium is:
+The built-in potential (`V_bi`) across the junction at thermal equilibrium is:
 
-$$
-V_{bi} = \frac{kT}{q} \ln{\left( \frac{N_a N_d}{n_i^2} \right)}
-$$
+V_bi = (kT/q) * ln((N_a * N_d) / (n_i^2))
+
 
 Where:
-- \(k\): Boltzmann constant (\(1.38 \times 10^{-23} \, \text{J/K}\))
-- \(T\): Absolute temperature (K)
-- \(q\): Elementary charge (\(1.6 \times 10^{-19} \, \text{C}\))
-- \(N_a\): Acceptor concentration in p-type region
-- \(N_d\): Donor concentration in n-type region
-- \(n_i\): Intrinsic carrier concentration
+- `k`: Boltzmann constant (`1.38 × 10^-23 J/K`)
+- `T`: Absolute temperature (K)
+- `q`: Elementary charge (`1.6 × 10^-19 C`)
+- `N_a`: Acceptor concentration in p-type region
+- `N_d`: Donor concentration in n-type region
+- `n_i`: Intrinsic carrier concentration
 
 ### 2. Electric Field and Charge Distribution
 
 The electric field in the depletion region varies with position. For an abrupt junction:
 
-$$
-E(x) = \frac{qN_d}{\epsilon_s}(x + x_n) \quad \text{for } -x_n \leq x \leq 0 \text{ (n-side)}
-$$
+E(x) = (qN_d / ε_s) * (x + x_n) for -x_n ≤ x ≤ 0 (n-side)
+E(x) = (qN_a / ε_s) * (x - x_p) for 0 ≤ x ≤ x_p (p-side)
 
-$$
-E(x) = \frac{qN_a}{\epsilon_s}(x - x_p) \quad \text{for } 0 \leq x \leq x_p \text{ (p-side)}
-$$
 
 Where:
-- \(\epsilon_s\): Semiconductor permittivity
-- \(x_n, x_p\): Depletion region widths in n and p regions
+- `ε_s`: Semiconductor permittivity
+- `x_n, x_p`: Depletion region widths in n and p regions
 
-The total depletion width (\(W\)) follows:
+The total depletion width (`W`) follows:
 
-$$
-W = x_n + x_p = \sqrt{\frac{2\epsilon_s}{q}\left(\frac{1}{N_a} + \frac{1}{N_d}\right)(V_{bi} - V_a)}
-$$
 
-Where \(V_a\) is the applied voltage (positive for forward bias).
+W = x_n + x_p = sqrt((2ε_s / q) * (1/N_a + 1/N_d) * (V_bi - V_a))
+
+
+Where `V_a` is the applied voltage (positive for forward bias).
 
 ### 3. Current-Voltage Characteristics
 
@@ -67,24 +62,22 @@ Where \(V_a\) is the applied voltage (positive for forward bias).
 
 When \(V_a > 0\), the current follows the diode equation:
 
-$$
-I = I_s\left(e^{\frac{qV_a}{nkT}} - 1\right)
-$$
+
+I = I_s * (e^(qV_a / nkT) - 1)
 
 Where:
-- \(I_s\): Reverse saturation current
-- \(n\): Ideality factor (1 for diffusion, 2 for recombination-dominated current)
+- `I_s`: Reverse saturation current
+- `n`: Ideality factor (1 for diffusion, 2 for recombination-dominated current)
 
 The reverse saturation current is:
 
-$$
-I_s = qA\left(\frac{D_n}{L_n}n_p + \frac{D_p}{L_p}p_n\right)
-$$
+I_s = qA * ((D_n / L_n) * n_p + (D_p / L_p) * p_n)
+
 
 Where:
-- \(D_n, D_p\): Diffusion coefficients
-- \(L_n, L_p\): Diffusion lengths
-- \(n_p, p_n\): Minority carrier concentrations
+- `D_n, D_p`: Diffusion coefficients
+- `L_n, L_p`: Diffusion lengths
+- `n_p, p_n`: Minority carrier concentrations
 
 #### Reverse Bias
 
@@ -131,7 +124,7 @@ PN junctions are fundamental to:
 ## Diagrams
 
 ### 1. Formation of Depletion Region
-![PN Junction Depletion Region Diagram](images/depletion.png)
+![PN Junction Depletion Region Diagram](experiment/images/depletion.png)
 
 ### 2. Electric Field and Charge Density
-![Electric Field and Charge Distribution Diagram](images/electric.png)
+![Electric Field and Charge Distribution Diagram](experiment/images/electric.png)
