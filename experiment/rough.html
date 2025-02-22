@@ -15,12 +15,11 @@
       <a href="bias.html" class="active">Bias Labeling</a>
     </nav>
     <main class="container">
-      
-        <button class="instructions-dropdown" onclick="toggleInstructions()">
-          Instructions 
-       </button>
-    
-         
+      <section class="exercise-section">
+        <div class="instructions-container">
+          <button class="instructions-dropdown" onclick="toggleInstructions()">
+             Instructions 
+          </button>
           <div class="instructions-content" id="instructionsContent">
             <ul>
               <li>Drag and drop the appropriate arrows from the arrow bank to the diagrams.</li>
@@ -28,42 +27,42 @@
               <li>Place the drift-related arrows in the lower drop zone.</li>
               <li>Ensure that the direction of the arrows corresponds to the type of current flow.</li>
             </ul>
-        
-         </div>
-         
-    
-      </main>
+          </div>
+        </div> 
     <div class="main-content">
       <div>
-        <section class="arrow-bank" id="arrowBank">
-        
-            <div class="arrow" draggable="true" data-type="diffusion-thick-right">
-              -------> diffusion(dominant)
-            </div>
-          <div class="arrow" draggable="true" data-type="diffusion-thin-right">
-            -------> Diffusion
+      <section class="arrow-bank" id="arrowBank">
+        <!-- <div class="arrow-group diffusion-arrows"> -->
+          <div class="arrow" draggable="true" data-type="diffusion-thick-right">
+            -------> diffusion(dominant)
           </div>
-          <div class="arrow" draggable="true" data-type="diffusion-thick-left">
-            <------- diffusion(dominant)
-          </div>
-          <div class="arrow" draggable="true" data-type="diffusion-thin-left">
-            <------- Diffusion
-          </div>
-          <div class="arrow" draggable="true" data-type="drift-thick-right">
-            -------> drift(dominant)
-          </div>
-          <div class="arrow" draggable="true" data-type="drift-thin-right">
-            -------> Drift
-          </div>
-          <div class="arrow" draggable="true" data-type="drift-thick-left">
-            <------- drift(dominant)
-          </div>
-          <div class="arrow" draggable="true" data-type="drift-thin-left">
-            <------- Drift
-          </div>
-        
-      </section>
+        <div class="arrow" draggable="true" data-type="diffusion-thin-right">
+          -------> Diffusion
+        </div>
+        <div class="arrow" draggable="true" data-type="diffusion-thick-left">
+          <------- diffusion(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="diffusion-thin-left">
+          <------- Diffusion
+        <!-- </div> -->
       </div>
+    
+      
+      <div class="arrow-group drift-arrows">
+        <div class="arrow" draggable="true" data-type="drift-thick-right">
+          -------> drift(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thin-right">
+          -------> Drift
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thick-left">
+          <------- drift(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thin-left">
+          <------- Drift
+        </div>
+      
+    </section>
       <div>
         <section class="diagrams">
           <div class="diagram-container">
@@ -92,14 +91,20 @@
             </div>
           </div>
         </section>
+
       </div>
-      <div> 
+      <div>
         <div class="controls-section">
-          <button class="check-button" onclick="checkAnswers()">SUBMIT</button>
+          <button class="check-button" onclick="checkAnswers()">Check Answers</button>
           <div id="feedback" class="feedback"></div>
         </div>
       </div>
+      
     </div>
+        
+      
+      </section>
+    </main>
 
     <script>
       function toggleInstructions() {
