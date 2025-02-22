@@ -10,7 +10,7 @@ A **PN junction** is formed by bringing together p-type and n-type semiconductor
 When these materials join, two fundamental processes occur:
 1. **Diffusion:** Majority carriers diffuse across the junction due to concentration gradients
 2. **Drift:** An electric field develops that causes drift of carriers in the opposite direction. Drift flow of current is in opposite direction to diffusion current.
-![current](./images/image.png)
+![current](images/image.png)
 ## Key Concepts and Physical Mechanisms
 
 ### 1. Formation of Depletion Region
@@ -114,8 +114,8 @@ PN junctions are fundamental to:
 
 ### 1. Formation of Depletion Region
 [PN Junction Depletion Region Diagram]
-![Depletion Region](./images/depletion.png)
+![Depletion Region](images/depletion.png)
 
 ### 2. Electric Field and Charge Density
 [Electric Field and Charge Distribution Diagram]
-![Electric Field](./images/electric.png)
+![Electric Field](images/electric.png)
