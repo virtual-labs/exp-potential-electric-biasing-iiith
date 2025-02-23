@@ -4,6 +4,23 @@
     justify-content: center;
     height: 100vh;
 }
+.instructions-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  #dropdown-arrow {
+    transition: transform 0.3s ease;
+    position: absolute;
+    right:50px;
+
+  }
+  
 .column {
     text-align: center;
   }
