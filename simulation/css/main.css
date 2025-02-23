@@ -1,0 +1,154 @@
+/* You CSS goes in here */
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 2px 0;
+  }
+  .column {
+    text-align: center;
+  }
+  .navigation a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border:.2rem solid #97d23d;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .navigation a.active {
+    background-color: #97d23d;;
+    color: black;
+    border-color:#97d23d;
+  }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+}
+.header {
+    text-align: center;
+    margin-bottom: 1px;
+    color: #2c3e50;
+}
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+.header p {
+    font-size: 1.2em;
+    color: #34495e;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+
+    padding: 3px;
+
+}
+.questions, .answers {
+    width: 45%;
+    position: relative;
+    z-index: 2;
+}
+.question, .answer {
+    padding: 1px 2px;
+    margin: 10px 0;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+.question:hover, .answer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+.selected {
+    background: #e3f2fd;
+    border-color: #2196F3;
+}
+.correct {
+    background: #c8e6c9;
+    border-color: #4CAF50;
+    animation: pulse-green 1s;
+}
+.incorrect {
+    background: #ffcdd2;
+    border-color: #f44336;
+    animation: pulse-red 1s;
+}
+@keyframes pulse-green {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+@keyframes pulse-red {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.button-container {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    z-index: 2;
+}
+button {
+    margin: 0 10px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+#checkBtn {
+    background: #97d23d;;
+    color: white;
+    box-shadow: 0 4px 6px rgba(33, 150, 243, 0.3);
+}
+#resetBtn {
+    background: #f44336;
+    color: white;
+    box-shadow: 0 4px 6px rgba(244, 67, 54, 0.3);
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+button:active {
+    transform: translateY(0);
+}
+#score {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}

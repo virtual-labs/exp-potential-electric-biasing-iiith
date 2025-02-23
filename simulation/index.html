@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PN Junction Matching Exercise</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+  </head>
+  <body>
+    <div class="header">
+    </div>
+
+    <!-- <div class="navigation">
+      <a href="index.html" class="active">Matching Exercise</a>
+      <a href="bias.html">Bias Labeling</a>
+    </div> -->
+    <div class="column">
+      <div class="v-tabs">
+          <ul>
+
+              <li id="Task1" class="is-active" >
+                  <a>
+                      Matching exercise
+                  </a>
+              </li>
+              <li  id="Task2" onclick="window.location.href = 'bias.html';">
+                  <a>
+                      Current labelling
+                  </a>
+              </li>
+            
+          </ul>
+      </div>
+  </div>
+    <div class="content">
+      <h2>PN Junction Matching Exercise</h2>
+      <p>
+        Connect each concept with its correct description by clicking a term and
+        then its matching definition.
+      </p>
+      <div class="container">
+        <div class="questions">
+          <div class="question" data-id="1">Built-in Potential</div>
+          <div class="question" data-id="2">Depletion Region</div>
+          <div class="question" data-id="3">Forward Bias</div>
+          <div class="question" data-id="4">Reverse Bias</div>
+          <div class="question" data-id="5">Electric Field</div>
+          <div class="question" data-id="6">Charge Density</div>
+        </div>
+
+        <div class="answers">
+          <div class="answer" data-id="5">
+            Vector quantity showing force on charge carriers
+          </div>
+          <div class="answer" data-id="2">
+            Region near the junction depleted of mobile carriers
+          </div>
+          <div class="answer" data-id="6">
+            Distribution of charges in semiconductor material
+          </div>
+          <div class="answer" data-id="3">
+            Positive voltage to P-side reduces barrier, allows current flow
+          </div>
+          <div class="answer" data-id="1">
+            Potential difference that develops across the junction in equilibrium
+          </div>
+          <div class="answer" data-id="4">
+            Negative voltage to P-side increases depletion width
+          </div>
+          <div class="answer" data-id="7">
+            Measure of how easily current flows through material
+          </div>
+          <div class="answer" data-id="8">
+            Region where electrons and holes recombine
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="checkBtn">Check Answers</button>
+        <button id="resetBtn">Reset Exercise</button>
+      </div>
+      <div id="score"></div>
+
+      <canvas id="drawCanvas"></canvas>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+  <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PN Junction Bias Labeling</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/bias.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+    </header>
+    <!-- <nav class="navigation">
+      <a href="index.html">Matching Exercise</a>
+      <a href="bias.html" class="active">Bias Labeling</a>
+    </nav> -->
+    <div class="column">
+      <div class="v-tabs">
+          <ul>
+
+              <li id="Task1" onclick="window.location.href = 'index.html';">
+                  <a>
+                      Matching exercise
+                  </a>
+              </li>
+              <li class="is-active" id="Task2">
+                  <a>
+                      Current labelling
+                  </a>
+              </li>
+            
+          </ul>
+      </div>
+  </div>
+    <main class="container">
+      
+        
+          <button class="instructions-dropdown" onclick="toggleInstructions()">
+            Instructions <span id="dropdown-arrow">&#9660;</span>
+        
+          
+       </button>
+    
+         
+          <div class="instructions-content" id="instructionsContent">
+            <ul>
+              <li>Drag and drop the appropriate arrows from the arrow bank to the diagrams.</li>
+              <li>Place the diffusion-related arrows in the upper drop zone.</li>
+              <li>Place the drift-related arrows in the lower drop zone.</li>
+              <li>Ensure that the direction of the arrows corresponds to the type of current flow.</li>
+            </ul>
+        
+         </div>
+         
+    
+      </main>
+    <div class="main-content">
+      <div>
+        <section class="arrow-bank" id="arrowBank">
+        <p class="v-datalist-title" style="text-align: center;">ARROW BANK</p>
+            <div class="arrow" draggable="true" data-type="diffusion-thick-right">
+              -------> diffusion(dominant)
+            </div>
+          <div class="arrow" draggable="true" data-type="diffusion-thin-right">
+            -------> Diffusion
+          </div>
+          <div class="arrow" draggable="true" data-type="diffusion-thick-left">
+            <------- diffusion(dominant)
+          </div>
+          <div class="arrow" draggable="true" data-type="diffusion-thin-left">
+            <------- Diffusion
+          </div>
+          <div class="arrow" draggable="true" data-type="drift-thick-right">
+            -------> drift(dominant)
+          </div>
+          <div class="arrow" draggable="true" data-type="drift-thin-right">
+            -------> Drift
+          </div>
+          <div class="arrow" draggable="true" data-type="drift-thick-left">
+            <------- drift(dominant)
+          </div>
+          <div class="arrow" draggable="true" data-type="drift-thin-left">
+            <------- Drift
+          </div>
+        
+      </section>
+      </div>
+      <div>
+        <section class="diagrams">
+          <div class="diagram-container">
+            <h3 class="diagram-title">Forward Bias</h3>
+            <div class="diagram" id="forward-bias">
+              <div class="pn-junction">
+                <div class="p-type">P</div>
+                <div class="depletion">Depletion Region</div>
+                <div class="n-type">N</div>
+              </div>
+              <div class="drop-zone diffusion" data-bias="forward-diffusion"></div>
+              <div class="drop-zone drift" data-bias="forward-drift"></div>
+            </div>
+          </div>
+
+          <div class="diagram-container">
+            <h3 class="diagram-title">Reverse Bias</h3>
+            <div class="diagram" id="reverse-bias">
+              <div class="pn-junction">
+                <div class="p-type">P</div>
+                <div class="depletion">Depletion Region</div>
+                <div class="n-type">N</div>
+              </div>
+              <div class="drop-zone diffusion" data-bias="reverse-diffusion"></div>
+              <div class="drop-zone drift" data-bias="reverse-drift"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div> 
+        <div class="controls-section">
+        <p class="v-datalist-title">OBSERVATIONS
+        </p>
+          <button class="v-button" onclick="checkAnswers()">SUBMIT</button>
+          <div id="feedback" class="feedback"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+     function toggleInstructions() {
+  const content = document.getElementById('instructionsContent');
+  const arrow = document.getElementById('dropdown-arrow');
+
+  if (content) {
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+      arrow.innerHTML = '&#9660;'; // Downward arrow
+    } else {
+      content.style.display = 'block';
+      arrow.innerHTML = '&#9650;'; // Upward arrow
+    }
+  }
+}
+
+    </script>
+    <script src="./js/bias.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
+  </body>
+</html>

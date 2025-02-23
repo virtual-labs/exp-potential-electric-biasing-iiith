@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PN Junction Bias Labeling</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/bias.css" />
+  </head>
+  <body>
+    <header class="header">
+    </header>
+    <nav class="navigation">
+      <a href="index.html">Matching Exercise</a>
+      <a href="bias.html" class="active">Bias Labeling</a>
+    </nav>
+    <main class="container">
+      <section class="exercise-section">
+        <div class="instructions-container">
+          <button class="instructions-dropdown" onclick="toggleInstructions()">
+             Instructions 
+          </button>
+          <div class="instructions-content" id="instructionsContent">
+            <ul>
+              <li>Drag and drop the appropriate arrows from the arrow bank to the diagrams.</li>
+              <li>Place the diffusion-related arrows in the upper drop zone.</li>
+              <li>Place the drift-related arrows in the lower drop zone.</li>
+              <li>Ensure that the direction of the arrows corresponds to the type of current flow.</li>
+            </ul>
+          </div>
+        </div> 
+    <div class="main-content">
+      <div>
+      <section class="arrow-bank" id="arrowBank">
+        <!-- <div class="arrow-group diffusion-arrows"> -->
+          <div class="arrow" draggable="true" data-type="diffusion-thick-right">
+            -------> diffusion(dominant)
+          </div>
+        <div class="arrow" draggable="true" data-type="diffusion-thin-right">
+          -------> Diffusion
+        </div>
+        <div class="arrow" draggable="true" data-type="diffusion-thick-left">
+          <------- diffusion(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="diffusion-thin-left">
+          <------- Diffusion
+        <!-- </div> -->
+      </div>
+    
+      
+      <div class="arrow-group drift-arrows">
+        <div class="arrow" draggable="true" data-type="drift-thick-right">
+          -------> drift(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thin-right">
+          -------> Drift
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thick-left">
+          <------- drift(dominant)
+        </div>
+        <div class="arrow" draggable="true" data-type="drift-thin-left">
+          <------- Drift
+        </div>
+      
+    </section>
+      <div>
+        <section class="diagrams">
+          <div class="diagram-container">
+            <h3 class="diagram-title">Forward Bias</h3>
+            <div class="diagram" id="forward-bias">
+              <div class="pn-junction">
+                <div class="p-type">P</div>
+                <div class="depletion">Depletion Region</div>
+                <div class="n-type">N</div>
+              </div>
+              <div class="drop-zone diffusion" data-bias="forward-diffusion"></div>
+              <div class="drop-zone drift" data-bias="forward-drift"></div>
+            </div>
+          </div>
+
+          <div class="diagram-container">
+            <h3 class="diagram-title">Reverse Bias</h3>
+            <div class="diagram" id="reverse-bias">
+              <div class="pn-junction">
+                <div class="p-type">P</div>
+                <div class="depletion">Depletion Region</div>
+                <div class="n-type">N</div>
+              </div>
+              <div class="drop-zone diffusion" data-bias="reverse-diffusion"></div>
+              <div class="drop-zone drift" data-bias="reverse-drift"></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div>
+        <div class="controls-section">
+          <button class="check-button" onclick="checkAnswers()">Check Answers</button>
+          <div id="feedback" class="feedback"></div>
+        </div>
+      </div>
+      
+    </div>
+        
+      
+      </section>
+    </main>
+
+    <script>
+      function toggleInstructions() {
+        const content = document.getElementById('instructionsContent');
+        if (content) {
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+      }
+    </script>
+    <script src="./js/bias.js"></script>
+  </body>
+</html>
