@@ -7,7 +7,9 @@
     gap: 100px;
     margin: 2px 0;
   }
-  
+  .column {
+    text-align: center;
+  }
   .navigation a {
     padding: 10px 20px;
     text-decoration: none;
@@ -24,7 +26,7 @@
   .navigation a.active {
     background-color: #97d23d;;
     color: black;
-    border-color:#97d23d;;
+    border-color:#97d23d;
   }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

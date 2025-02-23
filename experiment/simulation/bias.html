@@ -6,14 +6,33 @@
     <title>PN Junction Bias Labeling</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/bias.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css">
   </head>
   <body>
     <header class="header">
     </header>
-    <nav class="navigation">
+    <!-- <nav class="navigation">
       <a href="index.html">Matching Exercise</a>
       <a href="bias.html" class="active">Bias Labeling</a>
-    </nav>
+    </nav> -->
+    <div class="column">
+      <div class="v-tabs">
+          <ul>
+
+              <li id="Task1" onclick="window.location.href = 'index.html';">
+                  <a>
+                      Matching exercise
+                  </a>
+              </li>
+              <li class="is-active" id="Task2">
+                  <a>
+                      Current labelling
+                  </a>
+              </li>
+            
+          </ul>
+      </div>
+  </div>
     <main class="container">
       
         <button class="instructions-dropdown" onclick="toggleInstructions()">
@@ -95,7 +114,7 @@
       </div>
       <div> 
         <div class="controls-section">
-          <button class="check-button" onclick="checkAnswers()">SUBMIT</button>
+          <button class="v-button" onclick="checkAnswers()">SUBMIT</button>
           <div id="feedback" class="feedback"></div>
         </div>
       </div>
@@ -110,5 +129,6 @@
       }
     </script>
     <script src="./js/bias.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
   </body>
 </html>
