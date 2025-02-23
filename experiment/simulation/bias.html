@@ -35,8 +35,11 @@
   </div>
     <main class="container">
       
-        <button class="instructions-dropdown" onclick="toggleInstructions()">
-          Instructions 
+        
+          <button class="instructions-dropdown" onclick="toggleInstructions()">
+            Instructions <span id="dropdown-arrow">&#9660;</span>
+        
+          
        </button>
     
          
@@ -123,12 +126,21 @@
     </div>
 
     <script>
-      function toggleInstructions() {
-        const content = document.getElementById('instructionsContent');
-        if (content) {
-          content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        }
-      }
+     function toggleInstructions() {
+  const content = document.getElementById('instructionsContent');
+  const arrow = document.getElementById('dropdown-arrow');
+
+  if (content) {
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+      arrow.innerHTML = '&#9660;'; // Downward arrow
+    } else {
+      content.style.display = 'block';
+      arrow.innerHTML = '&#9650;'; // Upward arrow
+    }
+  }
+}
+
     </script>
     <script src="./js/bias.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/js/script.js"></script>
