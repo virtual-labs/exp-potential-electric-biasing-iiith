@@ -50,6 +50,8 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #f2f2f2;
+    margin-top:20px ;
+    height:61%;
 }
 
 .arrow {
@@ -82,13 +84,14 @@
     align-items: center;
     gap: 1rem;
     width: 95%;
-    height: 45%;
+    height:61%;
     max-width: 800px;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     border: 0.2rem solid #97d23d;
     padding: 20px;
     border-radius: 10px;
     background-color: #f2f2f2;
+    margin-top: 20px;
    
 }
 
